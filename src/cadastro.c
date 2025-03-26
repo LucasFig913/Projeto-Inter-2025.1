@@ -4,11 +4,12 @@
 void menuCadastro() {
     int opcao;
 
-        // Opções que o usuário pode escolher
-        printf("1 - Cadastrar\n");
-        printf("2 - Cadastrar equipamento\n");
-        printf("3 - Voltar\n");
-        printf("Digite a opção desejada: ");
+        do {// Opções que o usuário pode escolher
+        printf("Ola, bem vindo ao projeto interdisciplinar!\n\n");
+        printf("1 - Nao tem cadastro? Selecione esta opcao.\n");
+        printf("2 - Ja tem uma conta? Selecione esta opcao.\n");
+        //printf("3 - Voltar\n");
+        printf("Digite a opcao desejada: ");
         scanf("%d", &opcao);
 
         // Switch para usuário selecionar a opção desejada, assim chamando a função correspondente
@@ -17,22 +18,25 @@ void menuCadastro() {
                 cadastrarUsuario();
                 break;
             case 2:
-                cadastrarEquipamento();
-                break;
-            case 3:
-                printf("Voltando...\n");
+                loginUsuario();
                 break;
             default:
-                printf("Opção inválida!\n");
+                printf("Opcao invalida! Tente novamente.\n\n");
         }
+    } while (opcao != 1 && opcao != 2);
 }
 
 void cadastrarUsuario() {
-    printf("Cadastro de usuário em desenvolvimento...\n");
+    char nome[50];
+    int cpf;
+
+    printf("Digite seu nome completo: \n");
+    scanf("%s", nome);
+
 }
 
-void cadastrarEquipamento() {
-    printf("Cadastro de equipamento em desenvolvimento...\n");
+void loginUsuario() {
+    printf("Login do usuario em desenvolvimento...\n");
 }
 
 int main() {
