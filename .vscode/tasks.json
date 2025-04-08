@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build EnergiaApp",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+          "-Isrc",
+          "src/main.c",
+          "src/cadastro.c",
+          "src/calculo.c",
+          "src/database.c",
+          "-o",
+          "src/output/main.exe",
+          "-Wall",
+          "-Wextra",
+          "-g3"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "detail": "Compila o projeto EnergiaApp"
+      }
+    ]
+  }
+  
