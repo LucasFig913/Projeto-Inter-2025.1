@@ -3,6 +3,7 @@
 #include <string.h>
 #include "../include/cadastro.h"
 
+
 // Definições das variáveis globais
 User users[MAX_USERS];
 extern int totalUsers;

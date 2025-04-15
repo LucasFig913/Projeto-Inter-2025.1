@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 #include "../include/cadastro.h"
 #include "../include/calculo.h"
@@ -62,6 +63,9 @@ void showMainMenu() {
 }
 
 int main() {
+    // Define o uso de UTF-8
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
     // Carregar dados salvos
     loadUsers(users, &totalUsers);
     loadDevices(devices, &totalDevices);
